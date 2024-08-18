@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	* {
+		@apply transition-colors;
+	}
+
+	body {
+		@apply mx-[5%] bg-default font-mono text-primary lg:mx-48;
+	}
+
+	a,
+	input,
+	button,
+	select,
+	textarea {
+		outline: none !important;
+	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		@apply m-0;
+	}
+
+	input[type="number"] {
+		-moz-appearance: textfield;
+		appearance: textfield;
+	}
+}
+
+@layer components {
+	.light {
+		--color-text-primary: 16 16 24;
+		--color-text-secondary: 231 231 239;
+		--color-bg: 226 227 238;
+		--color-primary: 53 56 90;
+		--color-secondary: 153 156 199;
+		--color-accent: 76 82 148;
+	}
+
+	.dark {
+		--color-text-primary: 231 231 239;
+		--color-text-secondary: 16 16 24;
+		--color-bg: 17 18 29;
+		--color-primary: 165 168 202;
+		--color-secondary: 56 59 102;
+		--color-accent: 76 82 148;
+	}
+
+	.markdown *:not(pre, code) {
+		@apply font-roboto;
+	}
+
+	.markdown {
+		@apply w-1/2 break-words;
+	}
+
+	.markdown h1 {
+		@apply text-4xl font-bold;
+	}
+
+	.markdown h2 {
+		@apply text-3xl font-bold;
+	}
+
+	.markdown h3 {
+		@apply text-2xl font-bold;
+	}
+
+	.markdown h4 {
+		@apply text-xl font-bold;
+	}
+
+	.markdown h5 {
+		@apply text-lg font-bold;
+	}
+
+	.markdown h6 {
+		@apply text-base font-bold;
+	}
+
+	.markdown hr {
+		border-color: var(--color-text-primary);
+	}
+}
